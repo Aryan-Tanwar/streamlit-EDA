@@ -6,13 +6,13 @@ matplotlib.use("Agg")
 import seaborn as sns
 
 def main():
-	"""Semi Automated ML App with Streamlit """
-
+	
 	activities = ["EDA","Plots"]
 	choice = st.sidebar.selectbox("Select Activities",activities)
 
 	if choice == 'EDA':
 		st.subheader("Exploratory Data Analysis")
+		st.write('**Created by Aryan Tanwar**')
 
 		data = st.file_uploader("Upload a Dataset", type=["csv", "txt"])
 		if data is not None:
